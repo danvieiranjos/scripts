@@ -1,0 +1,30 @@
+
+How To Install And Connect To The Microsoft Teams PowerShell Module
+
+Install-Module PowerShellGet -Force -AllowClobber
+Update-Module MicrosoftTeams
+
+Procurar modulo: C:\:> Find-Module -Name MicrosoftTeams
+
+Instalar modulo: C:\:> Find-Module -Name MicrosoftTeams | Install-Module
+
+Acessar Teams: C:\:> Connect-MicrosoftTeams
+
+Consultar C:\:> Get-Command -Module MicrosoftTeams
+
+
+RECURSO DO MicrosoftTeams
+
+A experiência de reunião somente para exibição estará disponível no início de março de 2021. Esse recurso será habilitado em 1º de março de 2021 como OFF padrão. Você deve alterar a política padrão após essa data se quiser que o recurso seja on padrão. Use o PowerShell para habilitar a política:
+
+ Set-CsTeamsMeetingPolicy -Identity Global -StreamingAttendeeMode Enabled 
+ 
+ 
+Desabilitar a experiência somente para exibição do Teams:
+
+ Set-CsTeamsMeetingPolicy -Identity Global -StreamingAttendeeMode Disabled
+ 
+ 
+
+
+
